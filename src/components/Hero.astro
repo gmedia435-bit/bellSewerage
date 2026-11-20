@@ -1,63 +1,62 @@
 ---
-// HERO — Problem-Agitate-Solve framework (Allen Sultanic)
-// Full-bleed dark, cinematic, no emojis, enterprise copy
+// HERO — Enterprise White & Red Theme
 ---
 
-<section class="relative min-h-screen flex flex-col justify-center overflow-hidden noise-overlay" style="background: var(--obs);">
+<section class="relative min-h-screen flex flex-col justify-center overflow-hidden bg-white">
 
-  <!-- Subtle radial glow — amber, bottom-left -->
-  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 50% at 10% 90%, rgba(200,146,42,0.08) 0%, transparent 70%);"></div>
+  <!-- Subtle radial red glow at top -->
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(220,38,38,0.06) 0%, transparent 70%);"></div>
 
-  <!-- Grid lines background texture -->
-  <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);"></div>
+  <!-- Soft architectural grid background texture -->
+  <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px); background-size: 48px 48px;"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-24 w-full">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-24 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
       <!-- Left: Copy -->
-      <div class="lg:col-span-7 space-y-8">
+      <div class="lg:col-span-7 space-y-7">
 
         <!-- Eyebrow -->
-        <div class="flex items-center gap-3">
-          <div class="h-px w-8 line-sweep" style="background: #DC2626;"></div>
-          <span class="eyebrow" style="color: #EF4444;">Chicago's Licensed Drainlayer — A Proud 62 Years Family Owned &amp; Operated</span>
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200">
+          <img src="/images/bell-logo.png" alt="Bell" class="w-4 h-4 object-contain inline-block" />
+          <span class="text-xs font-bold text-red-700 tracking-wide">Chicago Licensed Drainlayer &bull; 62 Years Family Owned</span>
         </div>
 
         <!-- Headline — Future Pacing framework -->
-        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] sm:leading-[0.95]">
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-950 leading-[1.08] sm:leading-[1.02]">
           When Your Sewer Fails,<br>
-          <span class="font-display italic font-normal" style="color: #EF4444;">Every Hour Costs You.</span>
+          <span class="font-display italic font-normal text-red-600">Every Hour Costs You.</span>
         </h1>
 
         <!-- Sub — PAS: Problem / Agitate -->
-        <p class="text-lg leading-relaxed max-w-xl" style="color: var(--slate-2);">
-          Sewage backing up into your basement is not a plumbing problem. It is a structural failure developing beneath your property right now. Most Chicago contractors send a snake, collect their fee, and leave the root mass intact. Three weeks later, you are calling again.
+        <p class="text-lg leading-relaxed max-w-xl text-slate-600">
+          Sewage backing up into your basement is not an ordinary plumbing clog — it is an active structural emergency. Most contractors run a 2-inch mechanical snake, collect their fee, and leave the root mass intact. We bring commercial 4,000 PSI hydro-jetters, diagnose with 4K video, and permanently resolve the line.
         </p>
 
         <!-- CTA Row -->
-        <div class="flex flex-col sm:flex-row items-start gap-4">
-          <a href="tel:7736856644" class="btn-primary text-sm" style="padding: 1rem 2rem; font-size: 0.9375rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.0 1.17 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-            Call Now: (773) 685-6644
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="tel:7736856644" class="btn-primary text-sm shadow-lg shadow-red-600/25" style="padding: 1rem 2rem; font-size: 0.9375rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.0 1.17 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            Call 24/7: (773) 685-6644
           </a>
           <a href="#contact" class="btn-ghost text-sm">
-            Get a Free Estimate
+            Request Service Online
           </a>
         </div>
 
         <!-- Trust strip — contractor credentials -->
         <div class="flex flex-wrap gap-3 pt-2">
-          <div class="trust-badge flex items-center gap-2">
-            <img src="/images/bell-logo.png" alt="Bell" class="w-4 h-4 object-contain inline-block" />
-            <span>62 Years Family Owned &amp; Operated</span>
+          <div class="trust-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span class="text-slate-800">IL Lic. Drainlayer #055-043219</span>
           </div>
           <div class="trust-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color: #DC2626; flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            IL Lic. Drainlayer #055-043219
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="text-slate-800">35-Min Emergency Arrival</span>
           </div>
           <div class="trust-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color: #DC2626; flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            35-Min Average Arrival, Cook County
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <span class="text-slate-800">City Permit #058-198422</span>
           </div>
         </div>
 
@@ -66,63 +65,61 @@
       <!-- Right: Real Field Installation Showcase Card -->
       <div class="lg:col-span-5 relative reveal" style="transition-delay: 0.15s;">
 
-        <!-- Outer glow (Brand Red) -->
-        <div class="absolute -inset-px rounded-xl pointer-events-none" style="background: linear-gradient(135deg, rgba(220,38,38,0.4), transparent 60%); border-radius: 0.75rem;"></div>
-
-        <div class="relative rounded-xl overflow-hidden shadow-2xl" style="background: var(--obs-lite); border: 1px solid var(--rule);">
+        <div class="relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-2xl">
 
           <!-- Top status bar -->
-          <div class="flex items-center justify-between px-4 py-3 border-b" style="border-color: var(--rule); background: rgba(255,255,255,0.02);">
+          <div class="flex items-center justify-between px-5 py-3.5 bg-slate-50 border-b border-slate-200">
             <div class="flex items-center gap-2">
-              <span class="inline-flex w-2.5 h-2.5 rounded-full" style="background: #22c55e; box-shadow: 0 0 8px #22c55e;"></span>
-              <span class="font-mono text-xs font-bold tracking-widest uppercase text-white">CHICAGO FIELD INSTALLATION</span>
+              <span class="inline-flex w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-sm shadow-emerald-500/50"></span>
+              <span class="font-mono text-xs font-bold tracking-wider uppercase text-slate-800">ACTUAL CHICAGO FIELD WORK</span>
             </div>
             <div class="flex items-center gap-2 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase" style="background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3);">PASSED</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-emerald-100 text-emerald-800 border border-emerald-300">
+                PASSED INSPECTION
+              </span>
             </div>
           </div>
 
           <!-- Real Image Container -->
-          <div class="relative h-80 sm:h-96 overflow-hidden bg-black group">
+          <div class="relative h-80 sm:h-96 overflow-hidden bg-slate-900 group">
             <img
               src="/images/hero-tankless.jpg"
               alt="Bradford White Infiniti Tankless System installed by Bell Drainage Co."
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              style="filter: contrast(1.05) brightness(0.95);"
             />
-            <!-- Subtle gradient vignette -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none"></div>
+            <!-- Gradient vignette -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
 
             <!-- Floating verification badge on image -->
-            <div class="absolute top-3 left-3 px-3 py-1.5 rounded-md backdrop-blur-md flex items-center gap-2" style="background: rgba(11,14,23,0.8); border: 1px solid rgba(255,255,255,0.15);">
+            <div class="absolute top-3 left-3 px-3 py-1.5 rounded-lg backdrop-blur-md bg-white/90 border border-white/40 shadow-md flex items-center gap-2">
               <img src="/images/bell-logo.png" alt="Bell" class="w-4 h-4 object-contain" />
-              <span class="text-xs font-bold text-white tracking-wide">Bradford White &bull; Infiniti Tankless</span>
+              <span class="text-xs font-bold text-slate-900">Bradford White &bull; Infiniti Tankless</span>
             </div>
 
             <!-- Bottom Telemetry Card overlay on image -->
-            <div class="absolute bottom-3 inset-x-3 rounded-lg p-3 backdrop-blur-md" style="background: rgba(11,14,23,0.85); border: 1px solid rgba(255,255,255,0.1);">
+            <div class="absolute bottom-3 inset-x-3 rounded-xl p-3.5 backdrop-blur-md bg-slate-950/85 border border-white/10 text-white">
               <div class="flex items-center justify-between">
                 <div>
-                  <div class="text-xs font-bold text-white flex items-center gap-2">
+                  <div class="text-xs font-bold flex items-center gap-2 text-white">
                     <span>Precision Copper &amp; Dual-Vent Setup</span>
                   </div>
-                  <div class="text-[11px] mt-0.5" style="color: var(--slate-1);">
+                  <div class="text-[11px] mt-0.5 text-slate-300">
                     Installed &amp; Commissioned by Bell Drainage Co.
                   </div>
                 </div>
                 <div class="text-right">
-                  <div class="text-[10px] uppercase font-mono tracking-wider font-bold" style="color: #22c55e;">100% Code Compliant</div>
-                  <div class="text-[10px]" style="color: var(--slate-1);">City of Chicago</div>
+                  <div class="text-[10px] uppercase font-mono tracking-wider font-bold text-emerald-400">100% Code Compliant</div>
+                  <div class="text-[10px] text-slate-400">City of Chicago</div>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Bottom Action Bar -->
-          <div class="px-4 py-3 flex items-center justify-between gap-3" style="background: rgba(255,255,255,0.02);">
+          <div class="px-5 py-3.5 bg-white flex items-center justify-between gap-3 border-t border-slate-100">
             <div>
-              <div class="text-xs font-bold text-white">62-Year Master Craftsmanship</div>
-              <div class="text-xs mt-0.5" style="color: var(--slate-1);">Commercial &amp; Residential Service</div>
+              <div class="text-xs font-bold text-slate-900">62-Year Master Craftsmanship</div>
+              <div class="text-xs text-slate-500">Commercial &amp; Residential Service</div>
             </div>
             <a href="tel:7736856644" class="btn-primary text-xs" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
               Call Ron &amp; Jimmy
@@ -132,13 +129,13 @@
         </div>
 
         <!-- Floating social proof badge -->
-        <div class="absolute -bottom-5 -left-6 hidden sm:flex items-center gap-3 rounded-xl px-4 py-3 shadow-2xl" style="background: var(--obs-lite); border: 1px solid var(--rule); backdrop-filter: blur(16px);">
-          <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.3);">
+        <div class="absolute -bottom-5 -left-6 hidden sm:flex items-center gap-3 rounded-xl px-4 py-3 bg-white border border-slate-200 shadow-xl">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-red-50 border border-red-200">
             <img src="/images/bell-logo.png" alt="Bell" class="w-5 h-5 object-contain" />
           </div>
           <div>
-            <div class="text-xs font-bold text-white">Authentic Chicago Field Work</div>
-            <div class="text-xs" style="color: var(--slate-1);">No Subcontractors &bull; Family Owned</div>
+            <div class="text-xs font-bold text-slate-900">Authentic Chicago Field Work</div>
+            <div class="text-xs text-slate-500">No Subcontractors &bull; Family Owned</div>
           </div>
         </div>
 
@@ -148,16 +145,9 @@
   </div>
 
   <!-- Scroll cue -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator flex flex-col items-center gap-2" style="color: var(--slate-1);">
-    <span class="text-xs tracking-widest uppercase font-medium" style="font-size: 0.6rem;">Scroll</span>
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-400">
+    <span class="text-[10px] tracking-widest uppercase font-bold text-slate-500">Scroll</span>
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
 
 </section>
-
-<style>
-@keyframes scan-anim {
-  0% { top: 10%; }
-  100% { top: 90%; }
-}
-</style>

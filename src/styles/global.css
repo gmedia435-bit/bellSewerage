@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
 /* ─────────────────────────────────────────────
-   BELL SEWERAGE & DRAINAGE CO.
-   Enterprise Design System — Mobile-First & Responsive
+   BELL DRAINAGE CO.
+   Enterprise White & Red Design System
    Typography: Inter (UI) + Instrument Serif (Display)
-   Palette: Obsidian / Slate / Amber
+   Palette: Crisp White / Slate / Brand Red
    ───────────────────────────────────────────── */
 
 :root {
-  --obs: #0B0E17;        /* Deep Obsidian Navy */
-  --obs-mid: #111625;    /* Mid obsidian — section alt */
-  --obs-lite: #1A2236;   /* Light obsidian — card bg */
-  --slate-1: #8A93A8;    /* Muted body copy */
-  --slate-2: #CAD2E0;    /* Secondary body copy */
-  --white: #FFFFFF;      /* Crisp pure white */
+  --obs: #FFFFFF;        /* Primary section bg: Crisp Pure White */
+  --obs-mid: #F8FAFC;    /* Alt section bg: Soft Platinum Slate */
+  --obs-lite: #FFFFFF;   /* Card bg: Pure White with subtle shadow */
+  --slate-1: #64748B;    /* Muted labels & timestamps */
+  --slate-2: #334155;    /* Primary body copy (high readability) */
+  --white: #0F172A;      /* Primary text heading color (deep slate) */
   --red: #DC2626;        /* Official Brand Red */
-  --red-lite: #EF4444;   /* Red bright */
-  --red-dark: #B91C1C;   /* Red hover/deep */
-  --amber: #DC2626;      /* Aliased to brand red for components */
-  --amber-lite: #EF4444; /* Aliased to red bright */
-  --amber-pale: rgba(220, 38, 38, 0.12);
-  --rule: rgba(255,255,255,0.08); /* Dividers */
+  --red-lite: #EF4444;   /* Brand Red Bright */
+  --red-dark: #B91C1C;   /* Brand Red Hover */
+  --red-pale: #FEF2F2;   /* Soft red 50 background tint */
+  --amber: #DC2626;      /* Aliased for components */
+  --amber-lite: #EF4444;
+  --amber-pale: rgba(220, 38, 38, 0.08);
+  --rule: #E2E8F0;       /* Crisp light dividers (Slate 200) */
+  --card-shadow: 0 4px 12px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --card-shadow-hover: 0 16px 32px rgba(220, 38, 38, 0.12), 0 4px 8px rgba(15, 23, 42, 0.06);
 }
 
 html {
@@ -43,7 +46,7 @@ body {
   position: relative;
 }
 
-/* ── Scroll Progress Bar at very top of screen (Brand Red) ── */
+/* ── Top Scroll Progress Bar (Brand Red) ── */
 #scroll-progress {
   position: fixed;
   top: 0;
@@ -53,7 +56,7 @@ body {
   z-index: 100;
   width: 0%;
   transition: width 0.1s ease-out;
-  box-shadow: 0 0 10px rgba(220,38,38,0.6);
+  box-shadow: 0 0 10px rgba(220,38,38,0.5);
 }
 
 /* ── Display / Headings ── */
@@ -65,25 +68,25 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Inter', system-ui, sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.025em;
-  color: var(--white);
+  color: #0F172A;
   line-height: 1.15;
 }
 
 /* ── Utility Classes ── */
-.text-obs    { color: var(--obs); }
-.text-amber, .text-red  { color: #DC2626; }
-.text-white-primary { color: var(--white); }
+.text-obs    { color: #0F172A; }
+.text-amber, .text-red { color: #DC2626; }
+.text-white-primary { color: #0F172A; }
 .text-muted  { color: var(--slate-1); }
 .bg-obs      { background-color: var(--obs); }
 .bg-obs-mid  { background-color: var(--obs-mid); }
 .bg-obs-lite { background-color: var(--obs-lite); }
 .border-rule { border-color: var(--rule); }
 
-/* ── Red & White gradient text ── */
+/* ── Red gradient text on light backgrounds ── */
 .text-amber-gradient, .text-red-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #EF4444 60%, #DC2626 100%);
+  background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -96,7 +99,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   gap: 0.5rem;
   background: #DC2626;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 0.03em;
@@ -105,7 +108,7 @@ h1, h2, h3, h4 {
   min-height: 48px;
   border-radius: 0.375rem;
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 20px rgba(220,38,38,0.35);
+  box-shadow: 0 4px 16px rgba(220,38,38,0.3);
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -115,20 +118,20 @@ h1, h2, h3, h4 {
 .btn-primary:hover {
   background: #B91C1C;
   transform: translateY(-1px);
-  box-shadow: 0 8px 30px rgba(220,38,38,0.55);
+  box-shadow: 0 8px 24px rgba(220,38,38,0.45);
 }
 .btn-primary:active {
   transform: scale(0.98);
 }
 
-/* ── Ghost Button ── */
+/* ── Ghost Button (White & Slate with Red Hover) ── */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: transparent;
-  color: var(--white);
+  background: #FFFFFF;
+  color: #0F172A;
   font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 0.02em;
@@ -136,61 +139,47 @@ h1, h2, h3, h4 {
   padding: 0.875rem 1.75rem;
   min-height: 48px;
   border-radius: 0.375rem;
-  border: 1px solid rgba(255,255,255,0.18);
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  border: 1px solid #CBD5E1;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.15s ease;
   text-decoration: none;
   white-space: nowrap;
   touch-action: manipulation;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 .btn-ghost:hover {
-  border-color: rgba(255,255,255,0.4);
-  background: rgba(255,255,255,0.05);
+  border-color: #DC2626;
+  color: #DC2626;
+  background: #FEF2F2;
 }
 .btn-ghost:active {
   transform: scale(0.98);
 }
 
-/* ── Section Label (Eyebrow) ── */
+/* ── Eyebrow Label (Brand Red) ── */
 .eyebrow {
   display: inline-block;
   font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-weight: 800;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--amber);
+  color: #DC2626;
 }
 
-/* ── Cards & Hover ── */
-.card-dark {
-  background: var(--obs-lite);
-  border: 1px solid var(--rule);
+/* ── White Cards & Clean Shadows ── */
+.card-dark, .card-white {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 0.75rem;
-  transition: border-color 0.25s ease, transform 0.2s ease;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
-.card-dark:hover {
-  border-color: rgba(200,146,42,0.3);
+.card-dark:hover, .card-white:hover {
+  border-color: #DC2626;
+  box-shadow: var(--card-shadow-hover);
   transform: translateY(-2px);
 }
 
-/* ── Mobile Horizontal Snap Swiping Container ── */
-.snap-mobile-scroll {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 1rem;
-}
-.snap-mobile-scroll::-webkit-scrollbar {
-  display: none;
-}
-.snap-card {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-}
-
-/* ── Scroll Animations (Staggered Reveals) ── */
+/* ── Staggered Scroll Reveals ── */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -226,15 +215,16 @@ h1, h2, h3, h4 {
 
 /* ── Stat Glow ── */
 .stat-glow {
-  text-shadow: 0 0 35px rgba(200,146,42,0.35);
+  text-shadow: 0 0 24px rgba(220,38,38,0.25);
 }
 
 /* ── Service Card ── */
 .service-card {
-  background: var(--obs-lite);
-  border: 1px solid var(--rule);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 0.75rem;
   padding: 1.75rem;
+  box-shadow: var(--card-shadow);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
   position: relative;
   overflow: hidden;
@@ -243,14 +233,14 @@ h1, h2, h3, h4 {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  height: 3px;
+  background: linear-gradient(90deg, #DC2626, #EF4444);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 .service-card:hover {
-  border-color: rgba(200,146,42,0.3);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  border-color: #DC2626;
+  box-shadow: var(--card-shadow-hover);
   transform: translateY(-2px);
 }
 .service-card:hover::before {
@@ -260,22 +250,22 @@ h1, h2, h3, h4 {
 /* ── Input Fields ── */
 .input-field {
   width: 100%;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
   border-radius: 0.375rem;
   padding: 0.875rem 1rem;
   min-height: 48px;
-  color: var(--white);
+  color: #0F172A;
   font-size: 0.9375rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   outline: none;
 }
 .input-field::placeholder {
-  color: var(--slate-1);
+  color: #94A3B8;
 }
 .input-field:focus {
-  border-color: var(--amber);
-  box-shadow: 0 0 0 3px rgba(200,146,42,0.15);
+  border-color: #DC2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,0.15);
 }
 
 /* ── Trust badge strip ── */
@@ -284,19 +274,19 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 0.625rem;
   padding: 0.625rem 1rem;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--rule);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--slate-2);
-  letter-spacing: 0.01em;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 
 /* ── Before/After Handle ── */
 .ba-handle {
   width: 3px;
-  background: white;
+  background: #DC2626;
   position: absolute;
   top: 0; bottom: 0;
   cursor: ew-resize;
@@ -308,20 +298,21 @@ h1, h2, h3, h4 {
 .ba-pill {
   width: 44px;
   height: 44px;
-  background: white;
+  background: #FFFFFF;
+  border: 2px solid #DC2626;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
-  color: #0C0F1A;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  color: #DC2626;
   flex-shrink: 0;
   touch-action: none;
 }
 
 /* ── Accordion ── */
 .accordion-item {
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid #E2E8F0;
 }
 .accordion-btn {
   width: 100%;
@@ -331,9 +322,9 @@ h1, h2, h3, h4 {
   padding: 1.25rem 0;
   background: none;
   border: none;
-  color: var(--white);
+  color: #0F172A;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
   cursor: pointer;
   text-align: left;
@@ -341,30 +332,31 @@ h1, h2, h3, h4 {
   min-height: 48px;
 }
 .accordion-btn:hover {
-  color: var(--amber);
+  color: #DC2626;
 }
 .accordion-icon {
   width: 24px;
   height: 24px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid #CBD5E1;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   transition: transform 0.3s ease, border-color 0.2s, color 0.2s;
-  color: var(--slate-1);
+  color: #64748B;
   font-size: 1rem;
   line-height: 1;
 }
 .accordion-btn[aria-expanded="true"] .accordion-icon {
   transform: rotate(45deg);
-  border-color: var(--amber);
-  color: var(--amber);
+  border-color: #DC2626;
+  color: #DC2626;
+  background: #FEF2F2;
 }
 .accordion-body {
   padding-bottom: 1.25rem;
-  color: var(--slate-2);
+  color: #475569;
   font-size: 0.9375rem;
   line-height: 1.7;
   display: none;

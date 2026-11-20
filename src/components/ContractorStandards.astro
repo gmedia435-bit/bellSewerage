@@ -1,5 +1,5 @@
 ---
-// CONTRACTOR STANDARDS & FIELD COMMITMENTS — Genuine contractor trust, mobile swipeable
+// CONTRACTOR STANDARDS & FIELD COMMITMENTS — White Theme, 62-Year Heritage
 const standards = [
   {
     num: "01",
@@ -34,61 +34,40 @@ const standards = [
 ];
 ---
 
-<section id="standards" class="py-20 md:py-28 border-t overflow-hidden" style="background: var(--obs); border-color: var(--rule);">
+<section id="standards" class="py-20 md:py-28 border-t border-slate-200 bg-white overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
     <!-- Section header -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-12 md:mb-16">
       <div class="space-y-4 reveal">
         <span class="eyebrow">Our Field Standards</span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight text-slate-900">
           How a Real Contractor<br>
-          <span class="text-amber-gradient font-display italic font-normal">Treats Your Property.</span>
+          <span class="text-red-gradient font-display italic font-normal">Treats Your Property.</span>
         </h2>
       </div>
       <div class="flex items-end reveal" style="transition-delay:0.1s;">
-        <p class="text-sm md:text-base leading-relaxed" style="color: var(--slate-2);">
+        <p class="text-base leading-relaxed text-slate-600">
           No marketing fluff, no fabricated testimonials. We build trust through verified city licensure, written contracts, commercial-grade field machinery, and documented video proof on every single call.
         </p>
       </div>
     </div>
 
-    <!-- Mobile Swipe Cue -->
-    <div class="flex items-center justify-between md:hidden mb-4 text-xs" style="color: var(--slate-1);">
-      <span class="flex items-center gap-1.5 font-medium">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber);"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Swipe standards
-      </span>
-      <span id="standards-page-indicator" class="font-mono text-xs" style="color: var(--amber);">1 / 6</span>
-    </div>
-
-    <!-- Mobile Touch-Swipeable Rail / Desktop Grid Container -->
-    <div id="standards-container" class="snap-mobile-scroll md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- FULL 3-COL RESPONSIVE GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {standards.map((s, i) => (
-        <div class="snap-card w-[84vw] sm:w-[70vw] md:w-auto card-dark p-6 sm:p-8 space-y-4 reveal" style={`transition-delay: ${i * 0.06}s;`}>
-          <div class="flex items-center justify-between">
-            <span class="font-mono text-xs font-bold" style="color: var(--amber);">{s.num}</span>
-            <div class="w-2 h-2 rounded-full" style="background: var(--amber);"></div>
+        <div class="bg-white rounded-xl border border-slate-200 p-7 shadow-xs hover:shadow-md hover:border-red-500 transition-all duration-200 flex flex-col justify-between space-y-4 reveal" style={`transition-delay: ${i * 0.05}s;`}>
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">{s.num}</span>
+              <div class="w-2 h-2 rounded-full bg-red-500"></div>
+            </div>
+            <h3 class="text-lg font-bold leading-snug text-slate-900">{s.title}</h3>
+            <p class="text-sm leading-relaxed mt-2 text-slate-600">{s.body}</p>
           </div>
-          <h3 class="text-base sm:text-lg font-bold leading-snug" style="color: white;">{s.title}</h3>
-          <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--slate-2);">{s.body}</p>
         </div>
       ))}
     </div>
 
   </div>
 </section>
-
-<script>
-  // Mobile standards swipe tracker
-  const stdContainer = document.getElementById('standards-container');
-  const stdIndicator = document.getElementById('standards-page-indicator');
-  
-  stdContainer?.addEventListener('scroll', () => {
-    if (!stdIndicator) return;
-    const cardWidth = stdContainer.firstElementChild?.clientWidth || 300;
-    const scrollLeft = stdContainer.scrollLeft;
-    const activeIndex = Math.min(6, Math.max(1, Math.round(scrollLeft / cardWidth) + 1));
-    stdIndicator.textContent = `${activeIndex} / 6`;
-  }, { passive: true });
-</script>

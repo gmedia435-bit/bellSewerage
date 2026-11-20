@@ -1,5 +1,5 @@
 ---
-// SERVICES GRID — Enterprise card layout, mobile swipeable rail with snap scrolling
+// SERVICES GRID — White Theme with Red Accents, Desktop 3-Col Grid & Mobile Swipe Rail
 const services = [
   {
     num: "01",
@@ -46,18 +46,18 @@ const services = [
 ];
 ---
 
-<section id="services" class="py-20 md:py-28 overflow-hidden" style="background: var(--obs);">
+<section id="services" class="py-20 md:py-28 overflow-hidden bg-white border-t border-slate-200">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
     <!-- Section header -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 mb-12 md:mb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 mb-12 md:mb-16">
       <div class="lg:col-span-7 space-y-4 reveal">
         <span class="eyebrow">What We Do</span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight text-slate-900">
           Precision Sewer &amp; Drain<br>
-          <span class="text-amber-gradient font-display italic font-normal">Engineered for Chicago's Infrastructure</span>
+          <span class="text-red-gradient font-display italic font-normal">Engineered for Chicago's Infrastructure</span>
         </h2>
-        <p class="text-sm md:text-base leading-relaxed max-w-lg" style="color: var(--slate-2);">
+        <p class="text-base leading-relaxed max-w-lg text-slate-600">
           Chicago's clay-pipe laterals and combined storm-sewer system create failure modes that general plumbers are not equipped to solve. Every service below is performed by licensed drainlayers using commercial-grade diagnostic and repair equipment.
         </p>
       </div>
@@ -69,31 +69,33 @@ const services = [
       </div>
     </div>
 
-    <!-- Mobile Swipe Cue (visible on mobile only) -->
-    <div class="flex items-center justify-between md:hidden mb-4 text-xs" style="color: var(--slate-1);">
+    <!-- Mobile Swipe Cue -->
+    <div class="flex items-center justify-between md:hidden mb-4 text-xs text-slate-500">
       <span class="flex items-center gap-1.5 font-medium">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber);"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Swipe cards horizontally
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #DC2626;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Swipe services horizontally
       </span>
-      <span id="service-page-indicator" class="font-mono text-xs" style="color: var(--amber);">1 / 6</span>
+      <span id="service-page-indicator" class="font-mono text-xs font-bold text-red-600">1 / 6</span>
     </div>
 
-    <!-- Mobile Touch-Swipeable Rail / Desktop Grid Container -->
-    <div id="services-container" class="snap-mobile-scroll md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Mobile Touch Rail / Desktop 3-Col Grid -->
+    <div id="services-container" class="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 pb-4 md:pb-0 scroll-smooth snap-x snap-mandatory">
       {services.map((s, i) => (
-        <div class="snap-card w-[84vw] sm:w-[70vw] md:w-auto service-card reveal" style={`transition-delay: ${i * 0.06}s;`}>
-          <!-- Number + Indicator -->
-          <div class="flex items-start justify-between mb-4">
-            <span class="font-mono text-xs font-bold" style="color: var(--slate-1);">{s.num}</span>
-            <div class="w-2 h-2 rounded-full" style="background: var(--amber); opacity: 0.8;"></div>
+        <div class="w-[85vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-start bg-white rounded-xl border border-slate-200 p-7 shadow-xs hover:shadow-lg hover:border-red-500 transition-all duration-300 flex flex-col justify-between reveal" style={`transition-delay: ${i * 0.05}s;`}>
+          <div>
+            <!-- Number + Red indicator -->
+            <div class="flex items-start justify-between mb-4">
+              <span class="font-mono text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">{s.num}</span>
+              <div class="w-2 h-2 rounded-full bg-red-500"></div>
+            </div>
+            <h3 class="text-lg font-bold mb-1 leading-snug text-slate-900">{s.title}</h3>
+            <div class="text-xs font-bold mb-3 text-red-600">{s.sub}</div>
+            <p class="text-sm leading-relaxed mb-6 text-slate-600">{s.body}</p>
           </div>
-          <h3 class="text-base sm:text-lg font-bold mb-1 leading-snug" style="color: var(--white);">{s.title}</h3>
-          <div class="text-xs font-semibold mb-3" style="color: var(--amber);">{s.sub}</div>
-          <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color: var(--slate-2);">{s.body}</p>
           <!-- Tags -->
-          <div class="flex flex-wrap gap-2 pt-2 border-t" style="border-color: var(--rule);">
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
             {s.tags.map(tag => (
-              <span class="text-[11px] px-2 py-0.5 rounded-full font-medium" style="background: rgba(255,255,255,0.04); color: var(--slate-2); border: 1px solid var(--rule);">{tag}</span>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full font-medium bg-slate-50 text-slate-700 border border-slate-200">{tag}</span>
             ))}
           </div>
         </div>
@@ -104,15 +106,13 @@ const services = [
 </section>
 
 <script>
-  // Mobile swipe card index tracker
-  const container = document.getElementById('services-container');
-  const indicator = document.getElementById('service-page-indicator');
-  
-  container?.addEventListener('scroll', () => {
-    if (!indicator) return;
-    const cardWidth = container.firstElementChild?.clientWidth || 300;
-    const scrollLeft = container.scrollLeft;
+  const sContainer = document.getElementById('services-container');
+  const sIndicator = document.getElementById('service-page-indicator');
+  sContainer?.addEventListener('scroll', () => {
+    if (!sIndicator) return;
+    const cardWidth = sContainer.firstElementChild?.clientWidth || 300;
+    const scrollLeft = sContainer.scrollLeft;
     const activeIndex = Math.min(6, Math.max(1, Math.round(scrollLeft / cardWidth) + 1));
-    indicator.textContent = `${activeIndex} / 6`;
+    sIndicator.textContent = `${activeIndex} / 6`;
   }, { passive: true });
 </script>

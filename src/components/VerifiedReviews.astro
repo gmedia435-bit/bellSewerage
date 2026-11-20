@@ -1,146 +1,138 @@
 ---
-// VERIFIED FACEBOOK REVIEWS — 100% Authentic, zero emojis, enterprise card layout
-// Features mobile snap-swipe rail & desktop responsive grid
+// VERIFIED FACEBOOK REVIEWS — 100% Authentic, White Theme, ALL 9 REVIEWS VISIBLE
 const reviews = [
   {
     name: "Dariusz Kraj",
-    date: "January 2022",
-    tag: "Fast Dispatch & Fair Pricing",
+    date: "January 31, 2022",
+    tag: "Fast Service & Fair Price",
     text: "Fast, courteous & knowledgeable service with very reasonable prices. Highly recommend!!"
   },
   {
     name: "Kevin R. King",
-    date: "August 2020",
-    tag: "Master Technicians",
+    date: "August 3, 2020",
+    tag: "Ron & Jimmy Recommended",
     text: "Ron and Jimmy are the best! Friendly, fair, patient, and experts in all that they do! I highly recommend Bell Drainage for all of your plumbing needs!"
   },
   {
     name: "Michael Gallivan",
-    date: "April 2020",
+    date: "April 18, 2020",
     tag: "Owner Integrity",
     text: "Owner is First Class individual."
   },
   {
     name: "Anna Tuminello",
-    date: "January 2020",
-    tag: "45-Minute Arrival",
+    date: "January 3, 2020",
+    tag: "45-Minute Emergency Arrival",
     text: "Ron came out within 45 minutes of my call! Very professional, friendly and understanding. He fixed my DIY mistakes too."
   },
   {
     name: "Mandy Jo",
-    date: "February 2019",
-    tag: "Sunday Emergency Call",
-    text: "Thank you isn't enough! Job was done quickly and beyond fairly! He came out on a Sunday morning and was a pleasure to do business with! Knows what he's doing and didn't jerk me around. Highly recommend!"
+    date: "February 24, 2019",
+    tag: "Sunday Morning Service",
+    text: "Thank you isn't enough! Job was done quickly and beyond fairly! He came out on a Sunday morning and was a pleasure to do business with! Knows what he's doing and didn't jerk me around. Highly recommend! (And he likes dogs! BONUS!)"
   },
   {
     name: "Alisa Mayfield Conboy",
-    date: "February 2019",
+    date: "February 3, 2019",
     tag: "Same-Day Frozen Pipe Burst",
     text: "Bell had our water flowing again SAME DAY after a frozen pipe burst. GREAT service and quality!"
   },
   {
     name: "Susan Fumo",
-    date: "November 2017",
+    date: "November 28, 2017",
     tag: "Repeat Client",
     text: "I have used Bell Drainage in a number of occasions and have always been 100% satisfied! When it comes to plumbing issues, Bell Drainage is the ONLY company I will call on."
   },
   {
     name: "Jeff Dale",
-    date: "November 2017",
-    tag: "Direct Owner Service",
-    text: "Great company. Ron unclogged my pipes personally. Great with bathroom additions too."
+    date: "November 28, 2017",
+    tag: "Personal Owner Service",
+    text: "Great company. Ron unclogged my pipes personally. Great with bathroom additions too. 5 stars"
   },
   {
     name: "Stacy Nierman",
-    date: "April 2017",
-    tag: "Mainline Rodding",
-    text: "GREAT JOB!!, rodding out this terrible clog in my bathroom/kitchen!!! Excellent and speedy service! Will definitely be using them again! THANKS SO MUCH!!"
+    date: "April 27, 2017",
+    tag: "Mainline Drain Rodding",
+    text: "GREAT JOB!!, rodding out this terrible clog, in my bathroom/kitchen!!! excellent and speedy service! will defiantly be using them again!!! THANKS SO MUCH!! 5 stars"
   }
 ];
 ---
 
-<section id="reviews" class="py-20 md:py-28 border-t overflow-hidden" style="background: var(--obs-mid); border-color: var(--rule);">
+<section id="reviews" class="py-20 md:py-28 border-t" style="background: var(--obs-mid); border-color: var(--rule);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
     <!-- Section Header -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16 items-end">
       <div class="lg:col-span-7 space-y-4 reveal">
         <span class="eyebrow">Client Endorsements</span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight" style="color: #0F172A;">
           Recommended by Chicago Property Owners.<br>
-          <span class="text-amber-gradient font-display italic font-normal">100% Verified Facebook Rating.</span>
+          <span class="text-red-gradient font-display italic font-normal">100% Verified Facebook Reviews.</span>
         </h2>
-        <p class="text-sm md:text-base leading-relaxed max-w-xl" style="color: var(--slate-2);">
-          Unfiltered feedback directly from Chicago residents. When emergencies happen, our owner and master drainlayers respond in under 45 minutes, resolve frozen bursts the same day, and treat every home with honest contractor pricing.
+        <p class="text-base leading-relaxed max-w-xl" style="color: var(--slate-2);">
+          Unfiltered public recommendations from real Chicago residents. Read what our neighbors say about Ron, Jimmy, our 45-minute response times, and same-day emergency repairs.
         </p>
       </div>
 
-      <!-- Trust Stat Callout -->
-      <div class="lg:col-span-5 reveal" style="transition-delay: 0.15s;">
-        <div class="p-6 rounded-xl flex items-center gap-5" style="background: var(--obs-lite); border: 1px solid var(--rule);">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(220,38,38,0.12); border: 1px solid rgba(220,38,38,0.3);">
-            <!-- Official Red Bell / Facebook badge -->
-            <img src="/images/bell-logo.png" alt="Bell" class="w-7 h-7 object-contain" />
+      <!-- Official Trust Banner Callout (White Card with Red Border) -->
+      <div class="lg:col-span-5 reveal" style="transition-delay: 0.1s;">
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-md flex items-center gap-5">
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #FEF2F2; border: 1px solid rgba(220,38,38,0.2);">
+            <img src="/images/bell-logo.png" alt="Bell" class="w-8 h-8 object-contain" />
           </div>
           <div>
             <div class="flex items-center gap-2 mb-1">
-              <span class="text-xl font-black text-white">100% Recommend</span>
-              <span class="text-xs px-2 py-0.5 rounded font-bold uppercase tracking-wider" style="background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3);">Verified</span>
+              <span class="text-xl font-black text-slate-900">100% recommend</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider" style="background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0;">
+                (14 reviews)
+              </span>
             </div>
-            <div class="text-xs" style="color: var(--slate-1);">
-              62 Years Serving Chicago &bull; 14 Verified Facebook Recommendations
+            <div class="text-xs text-slate-500 font-medium flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: #1877F2;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Public Facebook Recommendations &bull; Bell Drainage Co.</span>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Swipe Cue -->
-    <div class="flex items-center justify-between md:hidden mb-4 text-xs" style="color: var(--slate-1);">
-      <span class="flex items-center gap-1.5 font-medium">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber);"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Swipe reviews horizontally
-      </span>
-      <span id="reviews-page-indicator" class="font-mono text-xs" style="color: var(--amber);">1 / 9</span>
-    </div>
-
-    <!-- Mobile Touch-Swipeable Rail / Desktop 3-Col Grid -->
-    <div id="reviews-container" class="snap-mobile-scroll md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- FULL 9-CARD RESPONSIVE GRID — All reviews immediately visible on desktop & mobile -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {reviews.map((r, i) => (
-        <div class="snap-card w-[84vw] sm:w-[70vw] md:w-auto card-dark p-6 sm:p-7 flex flex-col justify-between reveal" style={`transition-delay: ${i * 0.05}s;`}>
+        <div class="bg-white rounded-xl border border-slate-200 p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-red-500 transition-all duration-200 flex flex-col justify-between reveal" style={`transition-delay: ${i * 0.04}s;`}>
           <div>
-            <!-- Stars row + Verified tag -->
+            <!-- Header: Facebook badge + Service tag -->
             <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-1">
+              <div class="flex items-center gap-1.5">
                 {[1, 2, 3, 4, 5].map(() => (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: var(--amber);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 ))}
               </div>
-              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded tracking-wider" style="background: rgba(200,146,42,0.1); color: var(--amber); border: 1px solid rgba(200,146,42,0.25);">
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full" style="background: #FEF2F2; color: #DC2626; border: 1px solid rgba(220,38,38,0.15);">
                 {r.tag}
               </span>
             </div>
 
-            <!-- Review Body -->
-            <p class="text-sm leading-relaxed mb-6 font-normal" style="color: var(--white); min-height: 4.5rem;">
+            <!-- Review Text -->
+            <p class="text-sm leading-relaxed mb-6 font-normal text-slate-700">
               &ldquo;{r.text}&rdquo;
             </p>
           </div>
 
-          <!-- Author details -->
-          <div class="pt-4 border-t flex items-center justify-between" style="border-color: var(--rule);">
+          <!-- Author footer -->
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background: rgba(255,255,255,0.06); color: var(--amber); border: 1px solid var(--rule);">
+              <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs" style="background: #FEF2F2; color: #DC2626; border: 1px solid rgba(220,38,38,0.2);">
                 {r.name.charAt(0)}
               </div>
               <div>
-                <div class="text-xs font-bold" style="color: white;">{r.name}</div>
-                <div class="text-[11px]" style="color: var(--slate-1);">{r.date}</div>
+                <div class="text-xs font-bold text-slate-900">{r.name}</div>
+                <div class="text-[11px] text-slate-500">{r.date}</div>
               </div>
             </div>
 
-            <div class="flex items-center gap-1.5 text-[11px] font-medium" style="color: var(--slate-1);">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color: #1877F2;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <div class="flex items-center gap-1.5 text-[11px] font-semibold text-slate-500">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               <span>Facebook</span>
             </div>
           </div>
@@ -150,17 +142,3 @@ const reviews = [
 
   </div>
 </section>
-
-<script>
-  // Mobile reviews swipe tracker
-  const revContainer = document.getElementById('reviews-container');
-  const revIndicator = document.getElementById('reviews-page-indicator');
-  
-  revContainer?.addEventListener('scroll', () => {
-    if (!revIndicator) return;
-    const cardWidth = revContainer.firstElementChild?.clientWidth || 300;
-    const scrollLeft = revContainer.scrollLeft;
-    const activeIndex = Math.min(9, Math.max(1, Math.round(scrollLeft / cardWidth) + 1));
-    revIndicator.textContent = `${activeIndex} / 9`;
-  }, { passive: true });
-</script>
