@@ -1,0 +1,118 @@
+---
+// SERVICES GRID — Enterprise card layout, mobile swipeable rail with snap scrolling
+const services = [
+  {
+    num: "01",
+    title: "High-Pressure Hydro-Jetting",
+    sub: "4,000 PSI — Full pipe restoration",
+    body: "A mechanical snake creates a 2-inch channel through a clog. Hydro-jetting at 4,000 PSI removes everything from the pipe wall — grease, scale, root tendrils — restoring full bore diameter. No residue left to catch the next problem.",
+    tags: ["Residential", "Commercial", "Grease Lines"],
+  },
+  {
+    num: "02",
+    title: "Trenchless Sewer Relining",
+    sub: "CIPP epoxy — Zero excavation",
+    body: "We install a seamless structural sleeve inside your existing pipe without touching your lawn, driveway, or sidewalk. The cured-in-place epoxy liner carries a 50-year structural warranty and permanently eliminates root entry at every joint.",
+    tags: ["Clay Pipe", "Cast Iron", "No Dig"],
+  },
+  {
+    num: "03",
+    title: "4K Color Camera Inspection",
+    sub: "Full diagnostic — Video file delivered",
+    body: "Before we recommend any repair, we run a self-leveling 4K camera through your lateral line. You receive a time-stamped digital video file and a written report with exact depths. No guesswork, no upselling repairs you do not need.",
+    tags: ["Residential", "Pre-Purchase", "Commercial"],
+  },
+  {
+    num: "04",
+    title: "Overhead Sewer Conversion",
+    sub: "City of Chicago flood defense",
+    body: "Chicago's combined municipal sewer system surcharges during heavy rain events, forcing raw sewage backward into basement floor drains. An overhead conversion re-routes your basement plumbing above the flood level permanently. We handle all city permits.",
+    tags: ["Basement Flooding", "City Rebate Eligible"],
+  },
+  {
+    num: "05",
+    title: "Emergency Mainline Clearance",
+    sub: "24-Hour dispatch — Flat-rate pricing",
+    body: "When sewage is actively entering your home, the clock is running. Our fully equipped vans carry both mechanical cables and hydro-jetting equipment so the job gets finished, not patched. No overtime charges. No second trip.",
+    tags: ["24/7", "Residential", "Commercial"],
+  },
+  {
+    num: "06",
+    title: "Sump & Ejector Pump Systems",
+    sub: "Battery backup — Smart monitoring",
+    body: "Chicago storms knock out grid power during the heaviest rainfall. Our dual-redundant battery backup systems pump 2,400 GPH for 72 continuous hours. Wi-Fi monitoring alerts your phone before water reaches the sump pit floor.",
+    tags: ["Basement Protection", "Battery Backup"],
+  },
+];
+---
+
+<section id="services" class="py-20 md:py-28 overflow-hidden" style="background: var(--obs);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 mb-12 md:mb-20">
+      <div class="lg:col-span-7 space-y-4 reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+          Precision Sewer &amp; Drain<br>
+          <span class="text-amber-gradient font-display italic font-normal">Engineered for Chicago's Infrastructure</span>
+        </h2>
+        <p class="text-sm md:text-base leading-relaxed max-w-lg" style="color: var(--slate-2);">
+          Chicago's clay-pipe laterals and combined storm-sewer system create failure modes that general plumbers are not equipped to solve. Every service below is performed by licensed drainlayers using commercial-grade diagnostic and repair equipment.
+        </p>
+      </div>
+      <div class="lg:col-span-5 flex items-end reveal" style="transition-delay:0.15s;">
+        <a href="#contact" class="btn-primary w-full sm:w-auto">
+          Schedule Diagnostic Inspection
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Swipe Cue (visible on mobile only) -->
+    <div class="flex items-center justify-between md:hidden mb-4 text-xs" style="color: var(--slate-1);">
+      <span class="flex items-center gap-1.5 font-medium">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber);"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Swipe cards horizontally
+      </span>
+      <span id="service-page-indicator" class="font-mono text-xs" style="color: var(--amber);">1 / 6</span>
+    </div>
+
+    <!-- Mobile Touch-Swipeable Rail / Desktop Grid Container -->
+    <div id="services-container" class="snap-mobile-scroll md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((s, i) => (
+        <div class="snap-card w-[84vw] sm:w-[70vw] md:w-auto service-card reveal" style={`transition-delay: ${i * 0.06}s;`}>
+          <!-- Number + Indicator -->
+          <div class="flex items-start justify-between mb-4">
+            <span class="font-mono text-xs font-bold" style="color: var(--slate-1);">{s.num}</span>
+            <div class="w-2 h-2 rounded-full" style="background: var(--amber); opacity: 0.8;"></div>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold mb-1 leading-snug" style="color: var(--white);">{s.title}</h3>
+          <div class="text-xs font-semibold mb-3" style="color: var(--amber);">{s.sub}</div>
+          <p class="text-xs sm:text-sm leading-relaxed mb-5" style="color: var(--slate-2);">{s.body}</p>
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 pt-2 border-t" style="border-color: var(--rule);">
+            {s.tags.map(tag => (
+              <span class="text-[11px] px-2 py-0.5 rounded-full font-medium" style="background: rgba(255,255,255,0.04); color: var(--slate-2); border: 1px solid var(--rule);">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Mobile swipe card index tracker
+  const container = document.getElementById('services-container');
+  const indicator = document.getElementById('service-page-indicator');
+  
+  container?.addEventListener('scroll', () => {
+    if (!indicator) return;
+    const cardWidth = container.firstElementChild?.clientWidth || 300;
+    const scrollLeft = container.scrollLeft;
+    const activeIndex = Math.min(6, Math.max(1, Math.round(scrollLeft / cardWidth) + 1));
+    indicator.textContent = `${activeIndex} / 6`;
+  }, { passive: true });
+</script>

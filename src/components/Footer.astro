@@ -1,0 +1,110 @@
+---
+// FOOTER — Clean enterprise, correct business details
+---
+
+<footer class="border-t" style="background: var(--obs-mid); border-color: var(--rule);">
+
+  <!-- CTA Bar -->
+  <div class="border-b" style="border-color: var(--rule);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div class="space-y-3">
+          <h3 class="text-3xl sm:text-4xl font-black tracking-tight" style="color: white;">
+            Sewer or drain issue right now?
+          </h3>
+          <p class="text-base" style="color: var(--slate-2);">
+            Our 24-hour dispatch line connects directly to a licensed drainlayer — not a call center. If sewage is entering the building, say so when you call. We prioritize active emergencies.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <a href="tel:7736856644" class="btn-primary" style="font-size: 1.0625rem; padding: 1rem 2rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.0 1.17 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            (773) 685-6644
+          </a>
+          <a href="#contact" class="btn-ghost">
+            Request Service Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer body -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+      <!-- Brand -->
+      <div class="lg:col-span-1 space-y-4">
+        <div class="flex items-center gap-3">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2C9.4 2 4 7.4 4 14c0 9-4 12-4 12h24s-4-3-4-12C20 7.4 14.6 2 16 2z" fill="#C8922A"/>
+            <path d="M13 26a3 3 0 006 0" stroke="#C8922A" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div>
+            <div class="text-sm font-bold" style="color: white;">Bell Sewerage</div>
+            <div class="text-xs" style="color: var(--amber);">&amp; Drainage Co.</div>
+          </div>
+        </div>
+        <p class="text-xs leading-relaxed" style="color: var(--slate-1);">
+          Chicago's licensed drainlayer for sewer repair, hydro-jetting, and trenchless pipe lining. Family-owned and operating in Chicago since 1955.
+        </p>
+        <div class="text-xs space-y-1" style="color: var(--slate-1);">
+          <div>IL Drainlayer #055-043219</div>
+          <div>Chicago Permit #058-198422</div>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="space-y-3">
+        <div class="text-xs font-bold tracking-widest uppercase mb-4" style="color: var(--slate-1);">Services</div>
+        <ul class="space-y-2">
+          {["Hydro-Jetting", "Trenchless Sewer Lining", "Camera Inspection", "Overhead Sewer Conversion", "Emergency Clearance", "Sump Pump Systems", "Commercial Drain Service"].map(s => (
+            <li><a href="#services" class="text-xs transition-colors" style="color: var(--slate-2);" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--slate-2)'">{s}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Areas -->
+      <div class="space-y-3">
+        <div class="text-xs font-bold tracking-widest uppercase mb-4" style="color: var(--slate-1);">Service Areas</div>
+        <ul class="space-y-2">
+          {["Lincoln Park", "Lakeview", "Logan Square", "West Loop", "Dunning & Belmont", "South Loop", "Hyde Park", "Oak Park", "Evanston"].map(a => (
+            <li><a href="#coverage" class="text-xs transition-colors" style="color: var(--slate-2);" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--slate-2)'">{a}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="space-y-4">
+        <div class="text-xs font-bold tracking-widest uppercase mb-4" style="color: var(--slate-1);">Contact</div>
+        <div class="space-y-3">
+          <div>
+            <div class="text-xs mb-1" style="color: var(--slate-1);">24-Hour Emergency</div>
+            <a href="tel:7736856644" class="text-base font-black" style="color: white; text-decoration: none;">(773) 685-6644</a>
+          </div>
+          <div>
+            <div class="text-xs mb-1" style="color: var(--slate-1);">Office</div>
+            <div class="text-xs" style="color: var(--slate-2);">6057 W Addison St<br>Chicago, IL 60634</div>
+          </div>
+          <div>
+            <div class="text-xs mb-1" style="color: var(--slate-1);">Hours</div>
+            <div class="text-xs" style="color: var(--slate-2);">Open 24 Hours, 7 Days</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom row -->
+    <div class="pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4" style="border-color: var(--rule);">
+      <div class="text-xs" style="color: var(--slate-1);">
+        &copy; {new Date().getFullYear()} Bell Sewerage &amp; Drainage Co. All rights reserved. Licensed, Bonded &amp; Insured — Chicago, IL.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-xs transition-colors" style="color: var(--slate-1);" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--slate-1)'">Privacy Policy</a>
+        <a href="#" class="text-xs transition-colors" style="color: var(--slate-1);" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--slate-1)'">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+
+</footer>

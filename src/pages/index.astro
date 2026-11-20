@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EmergencyBanner from '../components/EmergencyBanner.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import StatsStrip from '../components/StatsStrip.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
+import ChicagoFloodDefense from '../components/ChicagoFloodDefense.astro';
+import InstantEstimator from '../components/InstantEstimator.astro';
+import ServiceAreaMap from '../components/ServiceAreaMap.astro';
+import ContractorStandards from '../components/ContractorStandards.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+import FloatingCallBar from '../components/FloatingCallBar.astro';
+---
+
+<Layout 
+  title="Bell Sewerage & Drainage Co. | Chicago Sewer & Drain Specialists — Est. 1955"
+  description="Licensed Chicago sewer and drain contractor serving Cook County since 1955. 4,000 PSI hydro-jetting, trenchless CIPP pipe lining, 4K camera diagnostics. 24-hour emergency dispatch. Call (773) 685-6644."
+>
+  <EmergencyBanner />
+  <Header />
+  <main>
+    <Hero />
+    <StatsStrip />
+    <ServicesGrid />
+    <BeforeAfterSlider />
+    <ChicagoFloodDefense />
+    <InstantEstimator />
+    <ContractorStandards />
+    <ServiceAreaMap />
+    <FAQ />
+  </main>
+  <Footer />
+  <FloatingCallBar />
+</Layout>

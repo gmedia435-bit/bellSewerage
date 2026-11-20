@@ -1,0 +1,94 @@
+---
+// CONTRACTOR STANDARDS & FIELD COMMITMENTS — Genuine contractor trust, mobile swipeable
+const standards = [
+  {
+    num: "01",
+    title: "Licensed City of Chicago Drainlayer",
+    body: "In Chicago, working on sewer laterals connecting to the municipal main requires a specialized City Drainlayer License (#055-043219). We hold the required bonds, pull the permits, and coordinate required city inspections. General handymen and unlicensed plumbers cannot legally perform this work."
+  },
+  {
+    num: "02",
+    title: "Upfront Written Pricing Before Work Begins",
+    body: "We do not believe in open-ended hourly estimates or mid-job price surprises. Once we inspect the problem, we provide a clear, written flat-rate scope. You approve the exact cost before our crews start their equipment."
+  },
+  {
+    num: "03",
+    title: "Documented 4K Video Verification",
+    body: "We never ask property owners to take our word for what is happening underground. Every diagnosis and completion is recorded with our self-leveling color cameras. You receive the full timestamped digital video file for your records and insurance."
+  },
+  {
+    num: "04",
+    title: "Heavy Commercial Contractor Equipment",
+    body: "We do not carry homeowner-grade consumer cables. Our fleet operates 4,000 PSI high-pressure water jetters, commercial root-cutting augers, and pneumatic trenchless lining rigs capable of restoring 4-inch to 12-inch commercial and residential lines."
+  },
+  {
+    num: "05",
+    title: "Job Site Cleanliness & Property Protection",
+    body: "Sewer and drain work is messy, but your home should never reflect it. Our technicians lay protective runners, seal off cleanout access points, and sanitize the work zone thoroughly before loading back into our trucks."
+  },
+  {
+    num: "06",
+    title: "Local Northwest Side Shop & Crew Accountability",
+    body: "We are not a national franchise or an out-of-state dispatch service. Our office and equipment yard are located at 6057 W Addison St. When you call us, you speak directly to local dispatchers who know Chicago plumbing architecture inside and out."
+  }
+];
+---
+
+<section id="standards" class="py-20 md:py-28 border-t overflow-hidden" style="background: var(--obs); border-color: var(--rule);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-12 md:mb-16">
+      <div class="space-y-4 reveal">
+        <span class="eyebrow">Our Field Standards</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+          How a Real Contractor<br>
+          <span class="text-amber-gradient font-display italic font-normal">Treats Your Property.</span>
+        </h2>
+      </div>
+      <div class="flex items-end reveal" style="transition-delay:0.1s;">
+        <p class="text-sm md:text-base leading-relaxed" style="color: var(--slate-2);">
+          No marketing fluff, no fabricated testimonials. We build trust through verified city licensure, written contracts, commercial-grade field machinery, and documented video proof on every single call.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mobile Swipe Cue -->
+    <div class="flex items-center justify-between md:hidden mb-4 text-xs" style="color: var(--slate-1);">
+      <span class="flex items-center gap-1.5 font-medium">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber);"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Swipe standards
+      </span>
+      <span id="standards-page-indicator" class="font-mono text-xs" style="color: var(--amber);">1 / 6</span>
+    </div>
+
+    <!-- Mobile Touch-Swipeable Rail / Desktop Grid Container -->
+    <div id="standards-container" class="snap-mobile-scroll md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {standards.map((s, i) => (
+        <div class="snap-card w-[84vw] sm:w-[70vw] md:w-auto card-dark p-6 sm:p-8 space-y-4 reveal" style={`transition-delay: ${i * 0.06}s;`}>
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs font-bold" style="color: var(--amber);">{s.num}</span>
+            <div class="w-2 h-2 rounded-full" style="background: var(--amber);"></div>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold leading-snug" style="color: white;">{s.title}</h3>
+          <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--slate-2);">{s.body}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Mobile standards swipe tracker
+  const stdContainer = document.getElementById('standards-container');
+  const stdIndicator = document.getElementById('standards-page-indicator');
+  
+  stdContainer?.addEventListener('scroll', () => {
+    if (!stdIndicator) return;
+    const cardWidth = stdContainer.firstElementChild?.clientWidth || 300;
+    const scrollLeft = stdContainer.scrollLeft;
+    const activeIndex = Math.min(6, Math.max(1, Math.round(scrollLeft / cardWidth) + 1));
+    stdIndicator.textContent = `${activeIndex} / 6`;
+  }, { passive: true });
+</script>

@@ -1,0 +1,72 @@
+---
+// FAQ ACCORDION — Sultanic authority stacking, no emojis
+const faqs = [
+  {
+    q: "How fast can you reach my Chicago neighborhood?",
+    a: "For active emergency calls — sewage entering the building — our average response time is 35 minutes across Chicago city proper. We dispatch from the Northwest Side, which puts us within range of Lincoln Park, the Loop, Logan Square, and Lakeview in under 30 minutes during normal traffic."
+  },
+  {
+    q: "What is the actual difference between drain snaking and hydro-jetting?",
+    a: "A mechanical cable auger creates a 2-inch passage through the center of a blockage. It does not clean the pipe walls. Grease, mineral scale, and root tendrils remain attached. The debris that caused the clog is still there — you're just temporarily open. Hydro-jetting at 4,000 PSI removes everything in contact with the pipe wall, restoring the original bore diameter. For recurring clogs, snaking is temporary; hydro-jetting resolves the underlying condition."
+  },
+  {
+    q: "Am I responsible for the sewer line under the street?",
+    a: "In Chicago, the property owner's responsibility extends from the house to the connection at the city main — typically located in the center of the alley or the right-of-way at the street. Our camera inspection will show you the exact footage and GPS depth of any failure point, so you know definitively whether it falls on private property or within the city's jurisdiction."
+  },
+  {
+    q: "How does trenchless sewer lining work and what does it cost?",
+    a: "Trenchless CIPP (Cured-In-Place Pipe) lining uses existing cleanout access to pull an epoxy-saturated felt liner through the damaged pipe section. Once inflated and cured — typically 4 to 6 hours — it creates a structurally independent, jointless pipe within the host pipe. No excavation required. Pricing depends on pipe diameter and linear footage. A residential lateral averages $4,500 to $9,000 versus $14,000 to $24,000 for traditional excavation. We provide written estimates following camera inspection."
+  },
+  {
+    q: "Do you charge overtime for nights and weekends?",
+    a: "No. We provide upfront flat-rate pricing regardless of when the job is scheduled. If a technician quotes you a rate at 11 PM on a Saturday, that is the final number — not a starting point that grows when parts or labor are added. We do not charge after-hours surcharges."
+  },
+  {
+    q: "What is the City of Chicago basement flooding rebate program?",
+    a: "The Chicago Department of Water Management's Basement Flooding Protection Program offers rebates for qualifying private property improvements including overhead sewer conversions, backwater valves, and drain tile systems. Eligible homeowners can receive up to $4,000. As licensed Chicago drainlayers, we prepare all required documentation, obtain necessary permits, and submit rebate applications on the homeowner's behalf."
+  },
+];
+---
+
+<section class="py-20 md:py-28 border-t" style="background: var(--obs); border-color: var(--rule);">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+
+    <div class="mb-10 md:mb-14 text-center space-y-4 reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2 class="text-4xl sm:text-5xl font-black tracking-tight">
+        What Chicago Property Owners<br>
+        <span class="text-amber-gradient font-display italic font-normal">Ask Us Most.</span>
+      </h2>
+    </div>
+
+    <div class="space-y-0 reveal" style="transition-delay: 0.1s;">
+      {faqs.map((item, i) => (
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false" data-index={i}>
+            <span>{item.q}</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body" data-body={i}>
+            {item.a}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      const idx = btn.getAttribute('data-index');
+      const body = document.querySelector(`[data-body="${idx}"]`);
+      const icon = btn.querySelector('.accordion-icon');
+
+      btn.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+      body?.classList.toggle('open', !isExpanded);
+      if (icon) icon.textContent = isExpanded ? '+' : '×';
+    });
+  });
+</script>
