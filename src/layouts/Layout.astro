@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = "Bell Sewerage & Drainage Co. | Chicago Sewer & Drain Specialists — Est. 1955",
-  description = "Licensed Chicago sewer and drain contractor serving Cook County since 1955. 4,000 PSI hydro-jetting, trenchless CIPP pipe lining, 4K camera diagnostics. 24-hour emergency response. Call (773) 685-6644."
+  title = "Bell Drainage Co. | 62 Years Family Owned & Operated — Chicago Sewer & Drain",
+  description = "Licensed Chicago sewer and drain contractor. A proud 62 years family owned and operated. 4,000 PSI hydro-jetting, trenchless CIPP pipe lining, 4K camera diagnostics. 24-hour emergency response. Call (773) 685-6644."
 } = Astro.props;
 ---
 
@@ -20,7 +20,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0C0F1A" />
+    <meta name="theme-color" content="#DC2626" />
 
     <!-- Canonical & OG -->
     <meta property="og:type" content="website" />
@@ -28,8 +28,9 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="en_US" />
 
-    <!-- Favicon SVG -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230C0F1A'/><path d='M16 4C10 4 6 8 6 14c0 8-3 10-3 10h26s-3-2-3-10c0-6-4-10-10-10z' fill='%23C8922A'/><path d='M13 24a3 3 0 006 0' fill='none' stroke='%23C8922A' stroke-width='2'/></svg>" />
+    <!-- Official Red Bell Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
 
     <!-- Fonts: Inter + Instrument Serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,11 +42,11 @@ const {
     {
       "@context": "https://schema.org",
       "@type": "PlumbingService",
-      "name": "Bell Sewerage & Drainage Co.",
+      "name": "Bell Drainage Co.",
       "telephone": "+17736856644",
       "priceRange": "$$",
       "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200",
-      "description": "Licensed Chicago sewer and drain contractor. Trenchless pipe lining, hydro-jetting, camera diagnostics. 24-hour emergency response.",
+      "description": "Licensed Chicago sewer and drain contractor. A proud 62 years family owned and operated. Trenchless pipe lining, hydro-jetting, camera diagnostics. 24-hour emergency response.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "6057 W Addison St",
