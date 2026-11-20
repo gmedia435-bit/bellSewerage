@@ -63,84 +63,82 @@
 
       </div>
 
-      <!-- Right: Diagnostic HUD card — no emojis, all telemetry -->
-      <div class="lg:col-span-5 relative">
+      <!-- Right: Real Field Installation Showcase Card -->
+      <div class="lg:col-span-5 relative reveal" style="transition-delay: 0.15s;">
 
-        <!-- Outer glow (Red) -->
-        <div class="absolute -inset-px rounded-xl pointer-events-none" style="background: linear-gradient(135deg, rgba(220,38,38,0.35), transparent 60%); border-radius: 0.75rem;"></div>
+        <!-- Outer glow (Brand Red) -->
+        <div class="absolute -inset-px rounded-xl pointer-events-none" style="background: linear-gradient(135deg, rgba(220,38,38,0.4), transparent 60%); border-radius: 0.75rem;"></div>
 
-        <div class="relative rounded-xl overflow-hidden" style="background: var(--obs-lite); border: 1px solid var(--rule);">
+        <div class="relative rounded-xl overflow-hidden shadow-2xl" style="background: var(--obs-lite); border: 1px solid var(--rule);">
 
-          <!-- HUD top bar -->
+          <!-- Top status bar -->
           <div class="flex items-center justify-between px-4 py-3 border-b" style="border-color: var(--rule); background: rgba(255,255,255,0.02);">
             <div class="flex items-center gap-2">
-              <span class="inline-flex w-2 h-2 rounded-full" style="background: #22c55e; box-shadow: 0 0 6px #22c55e;"></span>
-              <span class="font-mono text-xs font-semibold tracking-widest uppercase" style="color: #22c55e;">BELL-CAM 4K — LIVE</span>
+              <span class="inline-flex w-2.5 h-2.5 rounded-full" style="background: #22c55e; box-shadow: 0 0 8px #22c55e;"></span>
+              <span class="font-mono text-xs font-bold tracking-widest uppercase text-white">CHICAGO FIELD INSTALLATION</span>
             </div>
-            <div class="flex items-center gap-3 font-mono text-xs" style="color: var(--slate-1);">
-              <span>DEPTH 8.4 FT</span>
-              <span style="color: var(--rule);">|</span>
-              <span style="color: var(--amber);">4,000 PSI</span>
+            <div class="flex items-center gap-2 font-mono text-xs">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase" style="background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3);">PASSED</span>
             </div>
           </div>
 
-          <!-- Camera view -->
-          <div class="relative h-56 overflow-hidden" style="background: #000;">
+          <!-- Real Image Container -->
+          <div class="relative h-80 sm:h-96 overflow-hidden bg-black group">
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-              alt="Sewer pipe interior camera view"
-              class="w-full h-full object-cover opacity-60"
-              style="filter: contrast(1.1) saturate(0.6);"
+              src="/images/hero-tankless.jpg"
+              alt="Bradford White Infiniti Tankless System installed by Bell Drainage Co."
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              style="filter: contrast(1.05) brightness(0.95);"
             />
-            <!-- Grid scan overlay -->
-            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(0,168,100,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,168,100,0.04) 1px, transparent 1px); background-size: 20px 20px;"></div>
-            <!-- Scan line -->
-            <div class="absolute inset-x-0 h-0.5 scan-line" style="background: linear-gradient(90deg, transparent, rgba(0,255,100,0.6), transparent); top: 40%; animation: scan-anim 3s linear infinite;"></div>
-            <!-- Target crosshair -->
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div class="relative w-20 h-20 rounded-full" style="border: 1px solid rgba(0,255,100,0.25);">
-                <div class="absolute w-14 h-14 rounded-full inset-3" style="border: 1px solid rgba(0,255,100,0.15);"></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="w-1.5 h-1.5 rounded-full" style="background: rgba(0,255,100,0.6);"></div>
-                </div>
-              </div>
+            <!-- Subtle gradient vignette -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none"></div>
+
+            <!-- Floating verification badge on image -->
+            <div class="absolute top-3 left-3 px-3 py-1.5 rounded-md backdrop-blur-md flex items-center gap-2" style="background: rgba(11,14,23,0.8); border: 1px solid rgba(255,255,255,0.15);">
+              <img src="/images/bell-logo.png" alt="Bell" class="w-4 h-4 object-contain" />
+              <span class="text-xs font-bold text-white tracking-wide">Bradford White &bull; Infiniti Tankless</span>
             </div>
-            <!-- Telemetry labels -->
-            <div class="absolute top-3 left-3 font-mono text-xs px-2 py-1 rounded" style="background: rgba(0,0,0,0.65); color: rgba(0,255,100,0.9); border: 1px solid rgba(0,255,100,0.2);">
-              GRADE −2.1% &nbsp; GRADE OK
-            </div>
-            <div class="absolute bottom-3 inset-x-3 rounded-lg px-3 py-2.5" style="background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.08);">
+
+            <!-- Bottom Telemetry Card overlay on image -->
+            <div class="absolute bottom-3 inset-x-3 rounded-lg p-3 backdrop-blur-md" style="background: rgba(11,14,23,0.85); border: 1px solid rgba(255,255,255,0.1);">
               <div class="flex items-center justify-between">
                 <div>
-                  <div class="font-mono text-xs font-bold" style="color: white;">Root Mass — 42.6 ft</div>
-                  <div class="font-mono text-xs mt-0.5" style="color: var(--amber);">Cleared via Hydro-Jet 4,000 PSI</div>
+                  <div class="text-xs font-bold text-white flex items-center gap-2">
+                    <span>Precision Copper &amp; Dual-Vent Setup</span>
+                  </div>
+                  <div class="text-[11px] mt-0.5" style="color: var(--slate-1);">
+                    Installed &amp; Commissioned by Bell Drainage Co.
+                  </div>
                 </div>
-                <div class="text-xs font-bold px-2 py-1 rounded" style="background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3);">PASS</div>
+                <div class="text-right">
+                  <div class="text-[10px] uppercase font-mono tracking-wider font-bold" style="color: #22c55e;">100% Code Compliant</div>
+                  <div class="text-[10px]" style="color: var(--slate-1);">City of Chicago</div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Bottom dispatch strip -->
-          <div class="px-4 py-3 flex items-center justify-between gap-3">
+          <!-- Bottom Action Bar -->
+          <div class="px-4 py-3 flex items-center justify-between gap-3" style="background: rgba(255,255,255,0.02);">
             <div>
-              <div class="text-xs font-bold" style="color: white;">Unit 14 — En Route to Lakeview</div>
-              <div class="text-xs mt-0.5" style="color: var(--slate-1);">Mainline blockage — ETA 18 min</div>
+              <div class="text-xs font-bold text-white">62-Year Master Craftsmanship</div>
+              <div class="text-xs mt-0.5" style="color: var(--slate-1);">Commercial &amp; Residential Service</div>
             </div>
             <a href="tel:7736856644" class="btn-primary text-xs" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
-              Dispatch
+              Call Ron &amp; Jimmy
             </a>
           </div>
 
         </div>
 
-        <!-- Floating social proof card -->
+        <!-- Floating social proof badge -->
         <div class="absolute -bottom-5 -left-6 hidden sm:flex items-center gap-3 rounded-xl px-4 py-3 shadow-2xl" style="background: var(--obs-lite); border: 1px solid var(--rule); backdrop-filter: blur(16px);">
-          <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.3);">
+            <img src="/images/bell-logo.png" alt="Bell" class="w-5 h-5 object-contain" />
           </div>
           <div>
-            <div class="text-xs font-bold" style="color: white;">Line Restored — 44 min total</div>
-            <div class="text-xs" style="color: var(--slate-1);">Lincoln Park, Chicago</div>
+            <div class="text-xs font-bold text-white">Authentic Chicago Field Work</div>
+            <div class="text-xs" style="color: var(--slate-1);">No Subcontractors &bull; Family Owned</div>
           </div>
         </div>
 

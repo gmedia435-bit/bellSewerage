@@ -1,0 +1,130 @@
+---
+// REAL JOB SITE GALLERY — Authentic Chicago Field Work Proof
+const projects = [
+  {
+    title: "Bradford White Infiniti Tankless System",
+    category: "High-Efficiency Water Heating",
+    location: "Chicago, IL",
+    image: "/images/bradford-tankless.jpg",
+    desc: "Custom residential installation featuring dual copper manifolds, precision shut-off valves, and high-volume PVC power ventilation."
+  },
+  {
+    title: "Basement Overhead Sewer Conversion",
+    category: "Basement Flood Protection",
+    location: "Northwest Side, Chicago",
+    image: "/images/basement-overhead-excavation.jpg",
+    desc: "Active concrete slab excavation and sub-floor piping for city-rebate overhead conversion, stopping municipal backup permanently."
+  },
+  {
+    title: "Exterior Yard Drainage & Catch Basin",
+    category: "Stormwater Management",
+    location: "Cook County, IL",
+    image: "/images/yard-drainage-trench.jpg",
+    desc: "Deep trenching and green access basin installation with surgical sod removal and lawn preservation."
+  },
+  {
+    title: "Lateral Line Replacement & Trenching",
+    category: "Sewer Line Restoration",
+    location: "Chicago, IL",
+    image: "/images/exterior-sewer-line.jpg",
+    desc: "Sewer lateral trenching along brick residential foundation with clean alignment and grade verification."
+  }
+];
+---
+
+<section id="gallery" class="py-20 md:py-28 border-t overflow-hidden" style="background: var(--obs); border-color: var(--rule);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16 items-end">
+      <div class="lg:col-span-7 space-y-4 reveal">
+        <span class="eyebrow" style="color: #EF4444;">Field Proof</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+          Actual Job Sites.<br>
+          <span class="text-red-gradient font-display italic font-normal">Real Chicago Craftsmanship.</span>
+        </h2>
+        <p class="text-sm md:text-base leading-relaxed max-w-xl" style="color: var(--slate-2);">
+          No stock photography. No third-party contractor photos. These are real Chicago homes and businesses serviced by our master plumbers Ron, Jimmy, and the Bell Drainage crew.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 flex lg:justify-end reveal" style="transition-delay: 0.15s;">
+        <div class="inline-flex items-center gap-3 p-4 rounded-xl" style="background: var(--obs-lite); border: 1px solid var(--rule);">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(220,38,38,0.12); border: 1px solid rgba(220,38,38,0.25);">
+            <img src="/images/bell-logo.png" alt="Bell" class="w-6 h-6 object-contain" />
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">62 Years of Local Work</div>
+            <div class="text-xs" style="color: var(--slate-1);">Cook County Licensed &amp; Permitted</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Swipe Cue -->
+    <div class="flex items-center justify-between md:hidden mb-4 text-xs" style="color: var(--slate-1);">
+      <span class="flex items-center gap-1.5 font-medium">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #DC2626;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Swipe job photos
+      </span>
+      <span id="gallery-page-indicator" class="font-mono text-xs" style="color: #DC2626;">1 / 4</span>
+    </div>
+
+    <!-- Mobile Touch-Swipeable Rail / Desktop 4-Col Grid -->
+    <div id="gallery-container" class="snap-mobile-scroll md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {projects.map((p, i) => (
+        <div class="snap-card w-[84vw] sm:w-[70vw] md:w-auto card-dark overflow-hidden flex flex-col justify-between group reveal" style={`transition-delay: ${i * 0.08}s;`}>
+          <!-- Image -->
+          <div class="relative h-64 overflow-hidden bg-black">
+            <img
+              src={p.image}
+              alt={p.title}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              style="filter: contrast(1.05) brightness(0.95);"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded text-[10px] font-bold tracking-wider uppercase backdrop-blur-md" style="background: rgba(11,14,23,0.8); border: 1px solid rgba(255,255,255,0.15); color: #EF4444;">
+              {p.location}
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-[11px] font-mono tracking-wider uppercase font-semibold text-white/80">{p.category}</span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="text-base font-bold text-white group-hover:text-red-400 transition-colors">{p.title}</h3>
+              <p class="text-xs leading-relaxed mt-2" style="color: var(--slate-2);">{p.desc}</p>
+            </div>
+
+            <div class="pt-3 border-t flex items-center justify-between text-xs" style="border-color: var(--rule);">
+              <span class="font-semibold" style="color: var(--slate-1);">Installed by Bell Crew</span>
+              <span class="font-bold flex items-center gap-1" style="color: #22c55e;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified
+              </span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Mobile gallery swipe tracker
+  const galContainer = document.getElementById('gallery-container');
+  const galIndicator = document.getElementById('gallery-page-indicator');
+  
+  galContainer?.addEventListener('scroll', () => {
+    if (!galIndicator) return;
+    const cardWidth = galContainer.firstElementChild?.clientWidth || 300;
+    const scrollLeft = galContainer.scrollLeft;
+    const activeIndex = Math.min(4, Math.max(1, Math.round(scrollLeft / cardWidth) + 1));
+    galIndicator.textContent = `${activeIndex} / 4`;
+  }, { passive: true });
+</script>
